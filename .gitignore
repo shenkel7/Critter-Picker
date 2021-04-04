@@ -28,3 +28,4 @@ firebase-error.log*
 
 .env.local
 .env.*.local
+.env
