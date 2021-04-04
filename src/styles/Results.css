@@ -1,0 +1,47 @@
+.hor-scroll {
+    width: 450rem;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    padding-top: 5rem;
+    position: relative;
+}
+
+.card {
+    height: 20rem;
+    width: 20rem;
+    border-radius: 2rem;
+    margin-left: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.main-container {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;  */
+    height: 100vh;
+}
+
+.mini-container {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;
+    
+}
+
+.holder {
+    position: absolute;
+}
+
+.heading {
+    font-family: 'Cabin', sans-serif;
+    color: #57371A;
+    margin-bottom: 5rem;
+    font-size: 1.5rem;
+}

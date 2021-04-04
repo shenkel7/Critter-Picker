@@ -7,6 +7,7 @@
     text-align: center;
     font-size: 16px;
     border-radius: 20px;
+    border: none;
 }
 
 .column {
@@ -17,4 +18,16 @@
 
 button::disabled {
     background-color: #F09E54;
+}
+
+.button-no {
+    background-color: #F09E54;
+    color: #F4BE62;
+    margin-top: 10%;
+    width: 200px;
+    height: 60px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 20px;
+    border: none;
 }
