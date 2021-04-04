@@ -8,3 +8,13 @@
     font-size: 16px;
     border-radius: 20px;
 }
+
+.column {
+    float: left;
+    width: 33%;
+    padding: 30px;
+}
+
+button::disabled {
+    background-color: #F09E54;
+}

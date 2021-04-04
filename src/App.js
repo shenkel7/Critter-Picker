@@ -8,7 +8,6 @@ import {
 import About from './screens/About';
 import Home from './screens/Home';
 import Form1 from './screens/Form1';
-import Form2 from './screens/Form2';
 import Results from './screens/Results';
 
 function App() {

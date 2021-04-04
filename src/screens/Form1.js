@@ -8,6 +8,7 @@ import { ROUTES } from '../const/routes'
 import { useSelector, useDispatch } from 'react-redux'
 import { setSize, setGender, setDistance, setLocation } from '../app/matchSlice'
 import '../styles/button.css'
+import Buttons from '../components/button'
 
 const Form1 = (props) => {
     const [displaySize, setDisplaySize] = useState("Size");
@@ -76,8 +77,9 @@ const Form1 = (props) => {
                     <Dropdown.Item className="input-dropdown-item" onClick={() => changeGender("male,female", "Any")}>Any</Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
-
+            <Buttons />
             <Link to={ROUTES.RESULTS}><button className="button">Match Me!</button></Link>
+
         </div>
     </div>
   );
