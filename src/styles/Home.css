@@ -4,7 +4,8 @@ h1 {
     color: #57371A;
     text-align: center;
     margin-bottom: 80px;
-    
+    font-family: 'Barlow', sans-serif;
+    margin-left: auto;
 }
 
 .bone-button {

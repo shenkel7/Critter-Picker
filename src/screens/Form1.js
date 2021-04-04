@@ -5,7 +5,6 @@ const Form1 = () => {
     return(
         <div>
             <NavBar />
-            
         </div>
     )
 }
