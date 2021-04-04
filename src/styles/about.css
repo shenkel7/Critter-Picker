@@ -1,0 +1,37 @@
+.card{
+    width:20rem;
+    background-color: #f2a476;
+}
+
+.card:hover{
+    box-shadow:5px 10px 20px 1px rgba(0, 0, 0, 0.253) !important;
+}
+
+.card-img-top {
+    max-height: 200px;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Cabin', sans-serif;
+}
+
+.header {
+    height: 500px;
+    width: 100vw;
+    position: relative;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url(../images/animal-shelter.jpg);
+    bottom: 5rem;
+}
+
+.desc {
+    text-align: center;
+    font-family: 'Cabin', sans-serif;
+    top: 5rem;
+    font-size: 24px;
+}
