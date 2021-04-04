@@ -3,5 +3,4 @@ export const ROUTES = {
     ABOUT: "/about",
     RESULTS: "/results",
     FORM1: "/form1",
-    FORM2: "/form2",
 }

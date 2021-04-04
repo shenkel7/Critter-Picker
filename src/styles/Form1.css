@@ -1,6 +1,7 @@
 .form1 {
     font-family: 'Cabin', sans-serif;
     color: #57371A;
+    margin-bottom: 5rem;
 }
 
 .container {
@@ -11,15 +12,55 @@
     margin-top: 5rem;
 }
 
-h2 {
+.heading {
     text-align: center;
-    margin-top: 3%;
+    margin-top: 5rem;
 }
 
 .user-location {
-    width: 80vw;
+    width: 60vw;
+    outline: none;
+    border: none;
+    background-color: #FEF6ED;
+    border-radius: .5rem;
+    margin: auto;
 }
 
 .form-control::placeholder {
     color: #F4B942;
+}
+
+.input-dropdown, .input-dropdown-item {
+    width: 60vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+    border-radius: .5rem;
+}
+
+.input-dropdown {
+    margin-top: 2rem;
+    background-color: #FEF6ED;
+    color: #F4B942;
+    font-weight: 600;
+    font-family: 'Cabin';
+    
+}
+
+.input-dropdown:focus {
+    background-color: #FEF6ED;
+    color: #C18100;
+    outline: none;
+}
+
+.input-dropdown:active {
+    background-color: #FEF6ED;
+    color: #C18100;
+    outline: none;
+}
+
+.input-dropdown:hover {
+    background-color: #FEF6ED;
+    color: #C18100;
 }

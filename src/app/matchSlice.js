@@ -24,10 +24,10 @@ export const matchSlice = createSlice({
         state.distance = action.payload
     },
     setSize: (state, action) => {
-        state.size += action.payload
+        state.size = action.payload
     },
     setGender: (state, action) => {
-        state.gender += action.payload
+        state.gender = action.payload
     },
   },
 })

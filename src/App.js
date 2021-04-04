@@ -26,9 +26,6 @@ function App() {
         <Route path="/form1">
           <Form1 />
         </Route>
-        <Route path="/form2">
-          <Form2 />
-        </Route>
         <Route path="/results">
           <Results />
         </Route>
