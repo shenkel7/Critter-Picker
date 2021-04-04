@@ -9,20 +9,15 @@ import { ROUTES } from '../const/routes'
 
 function Home() {
   return(
-  
    <div className="page">
      <h1>CRITTER PICKER</h1>
-     
-     {/* <Link to="/">Home</Link>
-              <Link to="/about">About</Link>
-     <button onClick={}> 
-                  Hello
-              </button> */}
      <Link className="bone-button" to={ROUTES.FORM1}>
-       <img src={bone} alt="bone button"></img>
+       <img src={bone} className="bone rounded mx-auto d-block" alt="bone button"></img>
+       <p id="text">
+         Get Started
+       </p>
      </Link>
    </div>
-
   )
 }
 
