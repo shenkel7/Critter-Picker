@@ -5,6 +5,7 @@ import { Canvas, useFrame } from '@react-three/fiber'
 import { useGLTF, Html, PerspectiveCamera } from '@react-three/drei'
 import bone from '../images/bone.svg'
 import '../styles/Home.css'
+import { ROUTES } from '../const/routes'
 
 function Home() {
   return(
@@ -17,9 +18,9 @@ function Home() {
      <button onClick={}> 
                   Hello
               </button> */}
-     <div className="bone-button">
+     <Link className="bone-button" to={ROUTES.FORM1}>
        <img src={bone} alt="bone button"></img>
-     </div>
+     </Link>
    </div>
 
   )

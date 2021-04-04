@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/Form2.css'
 
 const PET_FINDER_URL = 'https://api.petfinder.com';
 
@@ -21,8 +22,11 @@ const Form2 = () => {
             console.log(data);
         });
     }
+
     return(
-        <div>Form2</div>
+        <div className="Container">
+            Form2
+        </div>
     )
 }
 
