@@ -1,6 +1,25 @@
-h2 {
+.form1 {
     font-family: 'Cabin', sans-serif;
     color: #57371A;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+h2 {
     text-align: center;
     margin-top: 3%;
+}
+
+.user-location {
+    width: 80vw;
+}
+
+.form-control::placeholder {
+    color: #F4B942;
 }
