@@ -1,5 +1,7 @@
 import React from 'react'
 import '../styles/Form2.css'
+import Dropdown from 'react-bootstrap/Dropdown'
+import NavBar from '../components/navbar';
 
 const PET_FINDER_URL = 'https://api.petfinder.com';
 
@@ -24,8 +26,20 @@ const Form2 = () => {
     }
 
     return(
-        <div className="Container">
-            Form2
+        <div>
+            <NavBar />
+            <div className="Container">
+            <Dropdown>
+                <Dropdown.Toggle variant="Warning" className="input-dropdown" id="dropdown-basic">
+                    Size
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                    <Dropdown.Item className="input-dropdown-item" onClick={() => console.log("clicke")}>Action</Dropdown.Item>
+                    <Dropdown.Item className="input-dropdown-item" onClick={() => console.log("clicke")}>Action</Dropdown.Item>
+                    <Dropdown.Item className="input-dropdown-item" onClick={() => console.log("clicke")}>Action</Dropdown.Item>
+                </Dropdown.Menu>
+            </Dropdown>
+            </div>
         </div>
     )
 }

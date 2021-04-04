@@ -24,15 +24,15 @@ const NavBar = (props) => {
     <div>
       <Navbar color="" light expand="md">
         <div className="logo2"><img src={icon} alt="icon"></img></div>
-        <NavbarBrand href="/">CRITTER PICKER</NavbarBrand>
+        <NavbarBrand style={{fontWeight: 'bold'}} href="/">CRITTER PICKER</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
-            <NavItem>
-              <NavLink href="/about">About Us</NavLink>
+          <Nav className="ml-auto" navbar>
+            <NavItem style={{fontWeight: 'bold'}}>
+              <NavLink href="/about">About</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/">Devpost</NavLink>
+              <NavLink style={{fontWeight: 'bold'}} href="/">Devpost</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
