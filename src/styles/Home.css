@@ -1,0 +1,16 @@
+
+h1 {
+    font-size: 100px;
+    color: #57371A;
+    text-align: center;
+    margin-bottom: 80px;
+    
+}
+
+.bone-button {
+    max-width:100%;
+    height:auto;
+    margin-left: 35%;
+    padding-top: 15%;
+    align-items: center;
+}
