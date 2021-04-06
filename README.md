@@ -1,5 +1,5 @@
 # 
-Created by Arielle Posadas and Kelly Shen for [!Freetail Hacker's Learn-a-thon 2021](https://freetail-hackers-learnathon.devpost.com/)!
+Created by Arielle Posadas and Kelly Shen for [Freetail Hacker's Learn-a-thon 2021](https://freetail-hackers-learnathon.devpost.com/)!
 
 ## Inspiration
 Every year, 1.5 million shelter animals are put down because they can’t find an owner. With our project, Critter Picker, we aim to make the process of finding a shelter pet as easy as possible to give these critters a loving home.
