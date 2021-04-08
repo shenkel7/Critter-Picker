@@ -32,7 +32,7 @@ const NavBar = (props) => {
               <NavLink href="/about">About</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink style={{fontWeight: 'bold'}} href="/">Devpost</NavLink>
+              <NavLink style={{fontWeight: 'bold'}} href="https://devpost.com/software/critter-picker">Devpost</NavLink>
             </NavItem>
           </Nav>
         </Collapse>

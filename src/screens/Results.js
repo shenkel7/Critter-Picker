@@ -1,42 +1,62 @@
 import React, {useState, useEffect} from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+import { setToken } from '../app/authSlice'
 import HorizontalScroll from 'react-scroll-horizontal';
 import NavBar from '../components/navbar'
+import { FixedSizeList as List } from "react-window";
 import '../styles/Results.css'
 
 const PET_FINDER_URL = 'https://api.petfinder.com';
 
 const Results = () => {
+    const dispatch = useDispatch();
+
     const [pets, setPets] = useState([]);
     const size = useSelector((state) => state.match.size);
     const location = useSelector((state) => state.match.location);
     const gender = useSelector((state) => state.match.gender);
     const distance = useSelector((state) => state.match.distance);
     const type = useSelector((state) => state.match.type);
+
+    const [currToken, setCurrToken] = useState(useSelector((state) => state.auth.token));
     
     useEffect(()=>{
-        async function getPets() {
-            const response = await fetch(`${PET_FINDER_URL}/v2/animals?location=${location}&distance=${distance}&size=${size}&type=${type}`, { 
-                method: 'get', 
-                headers: new Headers({
-                  Authorization: `Bearer ${process.env.REACT_APP_PETFINDER_TOKEN}`, 
-                }),
-            });
-            const data = await response.json();
-            console.log(data.animals);
-            setPets(data.animals);
-        }
         getPets();
         // console.log(pets);
-    },[]);
+    },[currToken]);
 
+    const getPets = () => {
+        console.log("getting pets");
+        fetch(`${PET_FINDER_URL}/v2/animals?location=${location}&distance=${distance}&size=${size}&type=${type}`, { 
+            method: 'get',
+            headers: new Headers({
+                Authorization: `Bearer ${currToken}`, 
+            }),
+        })
+        .then((response => response.json()))
+        .then((data) =>{
+            console.log("data", data);
+            setPets(data.animals);
+        })
+        .catch((err)=> {
+            console.log("error", err);
+            getToken();
+        })
+    }
 
-
-    // const getToken = () => {
-    //     fetch(`${PET_FINDER_URL}/v2/oauth2/token?grant_type=client_credentials&client_id=${process.env.REACT_APP_PETFINDER_KEY}&client_secret=${process.env.REACT_APP_PETFINDER_SECRET}`, { 
-    //         method: 'get', 
-    //       }).then(response => console.log(response));
-    // }
+    const getToken = () => {
+        fetch(`${PET_FINDER_URL}/v2/oauth2/token`, { 
+            method: 'POST', 
+            body: `grant_type=client_credentials&client_id=${process.env.REACT_APP_PETFINDER_KEY}&client_secret=${process.env.REACT_APP_PETFINDER_SECRET}`,
+	        headers: {
+		        'Content-Type': 'application/x-www-form-urlencoded'
+	        }
+          }).then(response =>response.json())
+          .then((data)=> {
+            dispatch(setToken(data.access_token));
+            setCurrToken(data.access_token);
+          });
+    }
 
     return(
         <div className="main-container">

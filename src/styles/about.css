@@ -26,12 +26,16 @@
     background-size: cover;
     background-position: 50% 50%;
     background-image: url(../images/animal-shelter.jpg);
-    bottom: 5rem;
 }
 
 .desc {
     text-align: center;
     font-family: 'Cabin', sans-serif;
-    top: 5rem;
     font-size: 24px;
+    padding: 0 5rem;
+}
+
+.section {
+    margin-top: 2rem;
+    margin-bottom: 8rem;
 }

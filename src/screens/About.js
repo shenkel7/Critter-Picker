@@ -27,24 +27,31 @@ function TwoPeople() {
         <div>
             <NavBar />
             <div class="header">
-                <div class="box">
+                {/* <div class="box">
                     <h1></h1>
+                </div> */}
+            </div>
+            <div className="section">
+                <br></br>
+                <h1>PURPOSE</h1>
+                <div className="desc">
+                    <p>
+                        Every year, 1.5 million shelter animals are put down because they can’t find an owner. With our project, Critter Picker, we aim to make the process of finding a shelter pet as easy as possible to give these critters a loving home. 
+                        Using the PetFinder API, we allow the user to input their location, preferred species of their desired pet, and then the pet’s size and gender. The website will show pets available that match the user's preferences! The user can click on one of their pet matches to travel to the pet’s profile on PetFinder.com.
+                        We intended the app’s interface to be similar to apps such as Tinder to make the searching process easier on the user. Unfortunately, we didn’t have enough time to implement swiping for “yes” and “no,” but we hope to do so in the future!
+                    </p>
                 </div>
             </div>
-            <div className="purpose">
-            <br></br>
-            <h1>PURPOSE</h1>
-            <div className="desc"><p>We wanted to make a website where people can easily find matches for adopting pets!</p>
-            </div>
-        </div>
-         <h1>CREATORS</h1>
-            <div className="container-fluid">
-                <div className="row">
-                    <div className="arielle">
-                        <OnePerson imgsrc = {img} title="Arielle Posadas" desc="CS Major at UTD"/>
-                    </div>
-                    <div className="kelly">
-                        <OnePerson imgsrc = {img2} title="Kelly Shen" desc="CS Major at UT"/>
+            <div className="section">
+                <h1>CREATORS</h1>
+                <div className="container-fluid">
+                    <div className="row">
+                        <div className="arielle">
+                            <OnePerson imgsrc = {img} title="Arielle Posadas" desc="CS Major at UTD"/>
+                        </div>
+                        <div className="kelly">
+                            <OnePerson imgsrc = {img2} title="Kelly Shen" desc="CS Major at UT"/>
+                        </div>
                     </div>
                 </div>
             </div>
