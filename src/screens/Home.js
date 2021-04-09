@@ -4,25 +4,10 @@ import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { Html, Text } from '@react-three/drei'
 import Model from '../models/Shiba'
 import '../styles/Home.css'
-import { ROUTES } from '../const/routes'
 
 function Home() {
 
   return(
-  //  <div className="page">
-  //    <h1 className="title">CRITTER PICKER</h1>
-  //    <Link className="link" to={ROUTES.FORM1}>
-  //      <div className="general">
-  //      <img src={bone} alt="bone button">
-         
-  //      </img>
-  //      <p id="text" className="abs-text">
-  //        Get Started
-  //      </p>
-
-  //      </div>
-  //    </Link>
-  //  </div>
   <div className="page">
     <h1 className="title">CRITTER PICKER</h1>
     <Canvas
