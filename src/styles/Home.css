@@ -10,6 +10,7 @@ h1 {
 .title {
     margin-top: 10vh;
     font-size: 7.5rem;
+    z-index: -1;
 }
 
 .bone-button {
@@ -49,4 +50,11 @@ h1 {
     position: absolute;
     top: 40%;
     left: 35%;
+}
+
+.cc {
+    font-family: 'Cabin', sans-serif;
+    color: white;
+    position: absolute;
+    bottom: 0;
 }

@@ -6,18 +6,43 @@ source: https://sketchfab.com/3d-models/shiba-inu-dog-80419f7e64e24afe97e0931b6a
 title: Shiba Inu Dog
 */
 
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { useGLTF } from '@react-three/drei'
+import { useFrame } from '@react-three/fiber'
+import { useLocation } from "wouter";
+import { useSpring, animated } from '@react-spring/three';
+import { ROUTES } from '../const/routes';
 
 export default function Model(props) {
-  const group = useRef()
-  const { nodes, materials } = useGLTF('./shiba_inu_dog/scene.gltf')
+  const [location, setLocation] = useLocation();
+  const [hovered, setHover] = useState(false);
+  const group = useRef();
+  useFrame(({mouse}) => {
+    group.current.rotation.y = mouse.x;
+    let clampX = -mouse.y;
+    group.current.rotation.x = clampX;
+  });
+
+  const scaleAnimation = useSpring({
+    scale: hovered ? 1 : .85,
+  });
+
+  const { nodes, materials } = useGLTF('/shiba_inu_dog/scene.gltf')
   return (
-    <group ref={group} {...props} dispose={null}>
+    <animated.group ref={group} {...props} dispose={null} 
+    onPointerOver={(event) => setHover(true)}
+    onPointerOut={(event) => setHover(false)}
+    scale={scaleAnimation.scale}
+    onClick={(event) => {
+      setLocation(ROUTES.FORM1);
+      // console.log("redirect");
+    }}
+    >
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
-          <group position={[0, 4.05, 0]}>
-            <mesh geometry={nodes.polySurface1_lambert1_0.geometry} material={materials.lambert1} />
+          <group position={props.position}>
+            <mesh geometry={nodes.polySurface1_lambert1_0.geometry} material={materials.lambert1} 
+            />
             <mesh geometry={nodes.polySurface2_lambert1_0.geometry} material={materials.lambert1} />
             <mesh geometry={nodes.polySurface3_lambert1_0.geometry} material={materials.lambert1} />
             <mesh geometry={nodes.polySurface4_lambert1_0.geometry} material={materials.lambert1} />
@@ -27,8 +52,8 @@ export default function Model(props) {
           </group>
         </group>
       </group>
-    </group>
+    </animated.group>
   )
 }
 
-useGLTF.preload('./shiba_inu_dog/scene.gltf')
+useGLTF.preload('/shiba_inu_dog/scene.gltf')
