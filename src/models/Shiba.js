@@ -24,7 +24,7 @@ export default function Model(props) {
   });
 
   const scaleAnimation = useSpring({
-    scale: hovered ? 1 : .85,
+    scale: hovered ? .85 : .65,
   });
 
   const { nodes, materials } = useGLTF('/shiba_inu_dog/scene.gltf')
