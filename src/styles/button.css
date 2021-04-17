@@ -10,10 +10,10 @@
     border: none;
 }
 
-.column {
-    float: right;
-    width: 33%;
-    padding: 30px;
+.row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
 }
 
 button::disabled {
