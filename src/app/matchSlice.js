@@ -4,6 +4,7 @@ export const matchSlice = createSlice({
   name: 'match',
   initialState: {
     location: '78712', //ut austin zip code
+    // example
     distance: 50,
     type: 'Dog',
     size: 'medium',
